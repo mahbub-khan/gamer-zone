@@ -131,6 +131,94 @@ nav {
   max-width: 100%;
 }
 
+/* funny videos styles */
+#funny-videos-wrapper {
+  margin-top: 60px;
+}
+#funny-videos-wrapper h1 {
+  font-size: 3em;
+  text-align: center;
+  color: #0b0223;
+}
+#funny-videos-wrapper > p {
+  font-size: 1.3em;
+  text-align: center;
+  color: #534c64;
+  padding: 15px 0;
+}
+#funny-videos {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 15px;
+  position: relative;
+}
+
+.funny-videos-content {
+  position: relative;
+  margin-top: 20px;
+}
+.funny-videos-content > p {
+  font-size: 1em;
+  font-weight: 500;
+  color: #534c64;
+  padding: 20px 5px 0 7px;
+  line-height: 25px;
+}
+.funny-videos-image {
+  position: relative;
+  border: 3px solid transparent;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.funny-videos-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 0%;
+  background-color: #000;
+  opacity: 0.7;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.funny-videos-image img {
+  width: 100%;
+}
+.play-button {
+  text-align: center;
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-45%, -50%);
+  transition: all 0.3s ease;
+  display: none;
+}
+.play-button p {
+  color: #fff;
+  font-size: 2em;
+}
+.play-button h4 {
+  font-size: 1.3em;
+  margin-top: 8px;
+}
+.funny-videos-image:hover {
+  border: 3px solid #ff42a5;
+}
+.funny-videos-image:hover + .play-button,
+.play-button:hover {
+  display: block;
+  cursor: pointer;
+}
+.funny-videos-image:hover::after {
+  width: 100%;
+  height: 100%;
+}
+.play-button:hover + .funny-videos-image::after {
+  width: 100%;
+  height: 100%;
+}
+
 /* responsive styles */
 @media only screen and (max-width: 568px) {
   nav,
@@ -172,5 +260,20 @@ nav {
     width: 100%;
     order: 1;
     padding: 0;
+  }
+
+  /* funny videos styles  */
+  #funny-videos {
+    grid-template-columns: 1fr;
+    column-gap: 0px;
+    text-align: center;
+  }
+  .funny-videos-content {
+    position: relative;
+    margin-top: 30px;
+    padding: 0 30px;
+  }
+  #funny-videos-wrapper > p {
+    padding-bottom: 40px;
   }
 }
