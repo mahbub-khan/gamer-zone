@@ -100,6 +100,7 @@ nav {
   -webkit-background-clip: text;
   color: transparent;
 }
+
 .banner-details p {
   font-size: 1.3em;
   font-weight: 500;
@@ -219,6 +220,52 @@ nav {
   height: 100%;
 }
 
+/* instant play starts */
+#instant-play-wrapper {
+  margin-top: 60px;
+}
+#instant-play {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.instant-play-text {
+  text-align: right;
+  width: 50%;
+  margin-right: 70px;
+  box-sizing: border-box;
+}
+.instant-play-text h1 {
+  font-weight: 700;
+  font-size: 3em;
+  color: #0b0223;
+  margin-bottom: 50px;
+}
+.instant-play-text p {
+  color: #534c64;
+  font-size: 1.3em;
+  font-weight: 400;
+  line-height: 30px;
+}
+.instant-play-images {
+  position: relative;
+  width: 50%;
+  box-sizing: border-box;
+}
+.ip-image-front {
+  width: 40%;
+  position: absolute;
+  top: 57%;
+  left: 0%;
+}
+.ip-image-back {
+  margin-left: 100px;
+}
+.ip-image-back img,
+.ip-image-front img {
+  width: 100%;
+}
+
 /* responsive styles */
 @media only screen and (max-width: 568px) {
   nav,
@@ -275,5 +322,26 @@ nav {
   }
   #funny-videos-wrapper > p {
     padding-bottom: 40px;
+  }
+
+  /* instant play section  */
+
+  #instant-play {
+    flex-direction: column;
+  }
+  .instant-play-text {
+    text-align: center;
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .instant-play-images {
+    margin-top: 60px;
+    width: 100%;
+    padding: 0 40px;
+  }
+
+  .ip-image-back {
+    margin-left: 50px;
   }
 }
